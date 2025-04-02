@@ -1,0 +1,166 @@
+/* Shop Container */
+.shop-container {
+    padding: 220px 100px 50px;
+    min-height: 100vh;
+    background: #000000;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Shop Header */
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.shop-header h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+}
+
+.filters select {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters select:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.filters select option {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Product Card */
+.product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+}
+
+.product-title {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+.product-price {
+    color: var(--primary);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    font-family: "Roboto", sans-serif;
+}
+
+.product-card:hover .add-to-cart {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.add-to-cart:hover {
+    background: #ff1a6c;
+}
+
+/* Category Filter Active State */
+.category-filter:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shop-container {
+        padding: 100px 20px 30px;
+    }
+
+    .shop-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .filters {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+} 

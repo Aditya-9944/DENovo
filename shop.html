@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - De' Novo</title>
+    <link rel="stylesheet" href="customer.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <a href="/" class="logo"><img src="images/dnlogo2.png" alt=""></a>
+        <ul class="nav">
+            <li><a href="index.html"><ion-icon name="home-outline"></ion-icon></a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="util">
+            <li><a href="#"><ion-icon name="search-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="person-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="heart-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
+            <span class="number"></span>
+        </ul>
+    </header>
+
+    <!-- Shop Section -->
+    <main class="shop-container">
+        <div class="shop-header">
+            <h1>Our Collection</h1>
+            <div class="filters">
+                <select class="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="women">Women</option>
+                    <option value="men">Men</option>
+                    <option value="special">Special</option>
+                </select>
+                <select class="sort-filter">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Women's Collection -->
+            <div class="product-card" data-category="women">
+                <img src="mock/River Island rays print t-shirt in ecru-Neutral.jpeg" alt="Elegant Black Dress" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Elegant Black Dress</h3>
+                    <p class="product-price">$129.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="women">
+                <img src="mock/polotno (7).png" alt="Summer Floral Maxi" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Summer Floral Maxi</h3>
+                    <p class="product-price">$89.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Men's Collection -->
+            <!-- Product cards will be added here -->
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
